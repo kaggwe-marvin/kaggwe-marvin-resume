@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Kaggwe Marvin</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <description>Recent content in Hugo on Kaggwe Marvin</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 27 Jun 2025 14:24:18 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Built This Site - My Journey with Hugo and the Ordin Project</title>
+      <link>http://localhost:1313/posts/how-i-built-this-site/</link>
+      <pubDate>Fri, 27 Jun 2025 14:24:18 -0700</pubDate>
+      <guid>http://localhost:1313/posts/how-i-built-this-site/</guid>
+      <description>&lt;h2 id=&#34;how-i-built-this-site---my-journey-with-hugo-and-the-ordin-project&#34;&gt;&#xD;&#xA;  How I Built This Site - My Journey with Hugo and the Ordin Project&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#how-i-built-this-site---my-journey-with-hugo-and-the-ordin-project&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Building a personal portfolio site has been on my todo list for ages, but it wasn&amp;rsquo;t until I started working on the Ordin project that I finally made it happen. Here&amp;rsquo;s the story of how this site came together and what I learned along the way.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-hugo&#34;&gt;&#xD;&#xA;  Why Hugo?&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why-hugo&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;When I began the Ordin project, I needed to document my progress and showcase my work. I wanted something:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
