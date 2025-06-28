@@ -3,7 +3,7 @@
 
 <head><script src="/kaggwe-marvin-resume/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=kaggwe-marvin-resume/livereload" data-no-instant defer></script>
   <title>
-  {{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }} · Kaggwe Marvin
+  MSYS2 QEMU Linux Setup Windows 10 Tiny10 · Kaggwe Marvin
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +13,30 @@
 
 
 <meta name="author" content="Kaggwe Marvin">
-<meta name="description" content="Kaggwe Marvin&#39;s personal website">
+<meta name="description" content="Complete guide to setting up Linux virtualization using MSYS2 and QEMU on Windows 10, including modified versions like Tiny10">
 <meta name="keywords" content="blog,developer,personal">
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}">
-  <meta name="twitter:description" content="Kaggwe Marvin&#39;s personal website">
+  <meta name="twitter:title" content="MSYS2 QEMU Linux Setup Windows 10 Tiny10">
+  <meta name="twitter:description" content="Complete guide to setting up Linux virtualization using MSYS2 and QEMU on Windows 10, including modified versions like Tiny10">
 
 <meta property="og:url" content="http://localhost:1313/kaggwe-marvin-resume/posts/msys2-qemu-linux-setup/">
   <meta property="og:site_name" content="Kaggwe Marvin">
-  <meta property="og:title" content="{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}">
-  <meta property="og:description" content="Kaggwe Marvin&#39;s personal website">
+  <meta property="og:title" content="MSYS2 QEMU Linux Setup Windows 10 Tiny10">
+  <meta property="og:description" content="Complete guide to setting up Linux virtualization using MSYS2 and QEMU on Windows 10, including modified versions like Tiny10">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-27T00:00:00+00:00">
+    <meta property="article:tag" content="Msys2">
+    <meta property="article:tag" content="Qemu">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Virtualization">
+    <meta property="article:tag" content="Windows">
+    <meta property="article:tag" content="Tiny10">
 
 
 
@@ -145,7 +153,7 @@
         <div class="post-title">
           <h1 class="title">
             <a class="title-link" href="http://localhost:1313/kaggwe-marvin-resume/posts/msys2-qemu-linux-setup/">
-              {{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}
+              MSYS2 QEMU Linux Setup Windows 10 Tiny10
             </a>
           </h1>
         </div>
@@ -153,24 +161,454 @@
           <div class="date">
             <span class="posted-on">
               <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="0001-01-01T00:00:00Z">
-                January 1, 0001
+              <time datetime="2025-06-27T00:00:00Z">
+                June 27, 2025
               </time>
             </span>
             <span class="reading-time">
               <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              0-minute read
+              5-minute read
             </span>
           </div>
           
-          
-          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/kaggwe-marvin-resume/categories/tutorials/">Tutorials</a>
+      <span class="separator">•</span>
+    <a href="/kaggwe-marvin-resume/categories/virtualization/">Virtualization</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/kaggwe-marvin-resume/tags/msys2/">Msys2</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/kaggwe-marvin-resume/tags/qemu/">Qemu</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/kaggwe-marvin-resume/tags/linux/">Linux</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/kaggwe-marvin-resume/tags/virtualization/">Virtualization</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/kaggwe-marvin-resume/tags/windows/">Windows</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/kaggwe-marvin-resume/tags/tiny10/">Tiny10</a>
+    </span></div>
+
         </div>
       </header>
 
       <div class="post-content">
         
-        
+        <h2 id="setting-up-linux-with-msys2-and-qemu-on-windows-10tiny10">
+  Setting Up Linux with MSYS2 and QEMU on Windows 10/Tiny10
+  <a class="heading-link" href="#setting-up-linux-with-msys2-and-qemu-on-windows-10tiny10">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>If you&rsquo;re running Windows 10 or a modified version like Tiny10 and need a lightweight Linux environment, MSYS2 with QEMU provides an excellent solution. This setup is particularly useful when Hyper-V isn&rsquo;t available or when you need more control over your virtualization environment.</p>
+<h2 id="why-msys2--qemu">
+  Why MSYS2 + QEMU?
+  <a class="heading-link" href="#why-msys2--qemu">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li><strong>Lightweight</strong>: Works on minimal Windows installations like Tiny10</li>
+<li><strong>No Hyper-V dependency</strong>: Perfect for systems where Hyper-V is disabled/unavailable</li>
+<li><strong>Full control</strong>: Complete virtualization without vendor lock-in</li>
+<li><strong>Performance</strong>: Direct hardware access through KVM-like features</li>
+</ul>
+<h2 id="prerequisites">
+  Prerequisites
+  <a class="heading-link" href="#prerequisites">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Windows 10 (including Tiny10 or other modified versions)</li>
+<li>At least 4GB RAM (8GB recommended)</li>
+<li>20GB+ free disk space</li>
+<li>Administrator access for initial setup</li>
+</ul>
+<h2 id="step-1-install-msys2">
+  Step 1: Install MSYS2
+  <a class="heading-link" href="#step-1-install-msys2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="download-and-install-msys2">
+  Download and Install MSYS2
+  <a class="heading-link" href="#download-and-install-msys2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Download MSYS2 from https://www.msys2.org/</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Run the installer and follow the setup wizard</span>
+</span></span></code></pre></div><h3 id="update-msys2-system">
+  Update MSYS2 System
+  <a class="heading-link" href="#update-msys2-system">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Open MSYS2 terminal and update the system</span>
+</span></span><span class="line"><span class="cl">pacman -Syu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Close terminal when prompted, reopen and run:</span>
+</span></span><span class="line"><span class="cl">pacman -Su
+</span></span></code></pre></div><h2 id="step-2-install-qemu-and-dependencies">
+  Step 2: Install QEMU and Dependencies
+  <a class="heading-link" href="#step-2-install-qemu-and-dependencies">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install QEMU and related packages</span>
+</span></span><span class="line"><span class="cl">pacman -S mingw-w64-x86_64-qemu
+</span></span><span class="line"><span class="cl">pacman -S mingw-w64-x86_64-qemu-system-x86_64
+</span></span><span class="line"><span class="cl">pacman -S mingw-w64-x86_64-spice-gtk3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install additional utilities</span>
+</span></span><span class="line"><span class="cl">pacman -S wget curl unzip
+</span></span></code></pre></div><h2 id="step-3-download-linux-iso">
+  Step 3: Download Linux ISO
+  <a class="heading-link" href="#step-3-download-linux-iso">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>For this guide, we&rsquo;ll use Ubuntu Server (lightweight option):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create a directory for VM files</span>
+</span></span><span class="line"><span class="cl">mkdir -p ~/vms/ubuntu
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/vms/ubuntu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Download Ubuntu Server ISO (adjust URL for latest version)</span>
+</span></span><span class="line"><span class="cl">wget https://releases.ubuntu.com/22.04/ubuntu-22.04.3-live-server-amd64.iso
+</span></span></code></pre></div><h2 id="step-4-create-virtual-disk">
+  Step 4: Create Virtual Disk
+  <a class="heading-link" href="#step-4-create-virtual-disk">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create a 20GB virtual disk</span>
+</span></span><span class="line"><span class="cl">qemu-img create -f qcow2 ubuntu.qcow2 20G
+</span></span></code></pre></div><h2 id="step-5-install-linux">
+  Step 5: Install Linux
+  <a class="heading-link" href="#step-5-install-linux">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Start the installation</span>
+</span></span><span class="line"><span class="cl">qemu-system-x86_64 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -m <span class="m">2048</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -cpu host <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -smp <span class="m">2</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -hda ubuntu.qcow2 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -cdrom ubuntu-22.04.3-live-server-amd64.iso <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -boot d <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -netdev user,id<span class="o">=</span>net0 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -device e1000,netdev<span class="o">=</span>net0 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -vga std
+</span></span></code></pre></div><h3 id="installation-process">
+  Installation Process
+  <a class="heading-link" href="#installation-process">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li><strong>Boot from ISO</strong>: The VM will boot from the Ubuntu ISO</li>
+<li><strong>Language/Keyboard</strong>: Select your preferences</li>
+<li><strong>Network</strong>: Configure network (usually auto-detected)</li>
+<li><strong>Storage</strong>: Use entire disk (virtual disk)</li>
+<li><strong>User Setup</strong>: Create your non-root user with sudo privileges</li>
+</ol>
+<h4 id="creating-a-sudo-user-during-installation">
+  Creating a Sudo User During Installation
+  <a class="heading-link" href="#creating-a-sudo-user-during-installation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># During Ubuntu installation:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Username: your_username</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Password: your_secure_password</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># The installer automatically adds the first user to sudo group</span>
+</span></span></code></pre></div><h2 id="step-6-post-installation-setup">
+  Step 6: Post-Installation Setup
+  <a class="heading-link" href="#step-6-post-installation-setup">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>After installation completes, restart without the ISO:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Boot the installed system</span>
+</span></span><span class="line"><span class="cl">qemu-system-x86_64 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -m <span class="m">2048</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -cpu host <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -smp <span class="m">2</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -hda ubuntu.qcow2 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -netdev user,id<span class="o">=</span>net0,hostfwd<span class="o">=</span>tcp::2222-:22 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -device e1000,netdev<span class="o">=</span>net0 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -vga std <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -daemonize
+</span></span></code></pre></div><h3 id="enable-ssh-access">
+  Enable SSH Access
+  <a class="heading-link" href="#enable-ssh-access">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Inside the VM, install and enable SSH</span>
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install openssh-server
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> ssh
+</span></span><span class="line"><span class="cl">sudo systemctl start ssh
+</span></span></code></pre></div><h3 id="connect-via-ssh-from-windows">
+  Connect via SSH from Windows
+  <a class="heading-link" href="#connect-via-ssh-from-windows">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># From MSYS2 terminal on Windows</span>
+</span></span><span class="line"><span class="cl">ssh your_username@localhost -p <span class="m">2222</span>
+</span></span></code></pre></div><h2 id="step-7-create-startup-scripts">
+  Step 7: Create Startup Scripts
+  <a class="heading-link" href="#step-7-create-startup-scripts">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="windows-batch-script">
+  Windows Batch Script
+  <a class="heading-link" href="#windows-batch-script">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl"><span class="c1">REM filepath: c:\msys64\home\%USERNAME%\start-ubuntu.bat</span>
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d C:\msys64\home\<span class="nv">%USERNAME%</span>\vms\ubuntu
+</span></span><span class="line"><span class="cl">C<span class="p">:</span><span class="nl">\msys64\mingw64\bin\qemu-system-x86_64.exe</span><span class="c1"> ^</span>
+</span></span><span class="line"><span class="cl">  -m 2048 <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span> -cpu host <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span> -smp 2 <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span> -hda ubuntu.qcow2 <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span> -netdev user,id=net0,hostfwd=tcp::2222-:22 <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span> -device e1000,netdev=net0 <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span> -vga std <span class="se">^
+</span></span></span><span class="line"><span class="cl"><span class="se"> </span> -daemonize
+</span></span></code></pre></div><h3 id="msys2-shell-script">
+  MSYS2 Shell Script
+  <a class="heading-link" href="#msys2-shell-script">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># filepath: ~/vms/start-ubuntu.sh</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/vms/ubuntu
+</span></span><span class="line"><span class="cl">qemu-system-x86_64 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -m <span class="m">2048</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -cpu host <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -smp <span class="m">2</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -hda ubuntu.qcow2 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -netdev user,id<span class="o">=</span>net0,hostfwd<span class="o">=</span>tcp::2222-:22 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -device e1000,netdev<span class="o">=</span>net0 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -vga std <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -daemonize
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Ubuntu VM started. Connect via: ssh your_username@localhost -p 2222&#34;</span>
+</span></span></code></pre></div><p>Make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x ~/vms/start-ubuntu.sh
+</span></span></code></pre></div><h2 id="managing-your-linux-vm">
+  Managing Your Linux VM
+  <a class="heading-link" href="#managing-your-linux-vm">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="start-the-vm">
+  Start the VM
+  <a class="heading-link" href="#start-the-vm">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./start-ubuntu.sh
+</span></span></code></pre></div><h3 id="connect-via-ssh">
+  Connect via SSH
+  <a class="heading-link" href="#connect-via-ssh">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh your_username@localhost -p <span class="m">2222</span>
+</span></span></code></pre></div><h3 id="stop-the-vm">
+  Stop the VM
+  <a class="heading-link" href="#stop-the-vm">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># From inside the VM</span>
+</span></span><span class="line"><span class="cl">sudo shutdown -h now
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or kill QEMU process from Windows</span>
+</span></span><span class="line"><span class="cl">taskkill /f /im qemu-system-x86_64.exe
+</span></span></code></pre></div><h3 id="check-vm-status">
+  Check VM Status
+  <a class="heading-link" href="#check-vm-status">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># List running QEMU processes</span>
+</span></span><span class="line"><span class="cl">tasklist <span class="p">|</span> findstr qemu
+</span></span></code></pre></div><h2 id="sudo-user-management-inside-linux">
+  Sudo User Management Inside Linux
+  <a class="heading-link" href="#sudo-user-management-inside-linux">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="verify-sudo-access">
+  Verify Sudo Access
+  <a class="heading-link" href="#verify-sudo-access">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Test sudo access</span>
+</span></span><span class="line"><span class="cl">sudo whoami
+</span></span><span class="line"><span class="cl"><span class="c1"># Should return: root</span>
+</span></span></code></pre></div><h3 id="add-additional-sudo-users">
+  Add Additional Sudo Users
+  <a class="heading-link" href="#add-additional-sudo-users">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create new user</span>
+</span></span><span class="line"><span class="cl">sudo useradd -m -s /bin/bash newuser
+</span></span><span class="line"><span class="cl">sudo passwd newuser
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add to sudo group</span>
+</span></span><span class="line"><span class="cl">sudo usermod -aG sudo newuser
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Verify</span>
+</span></span><span class="line"><span class="cl">groups newuser
+</span></span></code></pre></div><h3 id="configure-passwordless-sudo-optional">
+  Configure Passwordless Sudo (Optional)
+  <a class="heading-link" href="#configure-passwordless-sudo-optional">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Edit sudoers file</span>
+</span></span><span class="line"><span class="cl">sudo visudo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add line:</span>
+</span></span><span class="line"><span class="cl">your_username <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> NOPASSWD:ALL
+</span></span></code></pre></div><h2 id="troubleshooting">
+  Troubleshooting
+  <a class="heading-link" href="#troubleshooting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="common-issues-on-tiny10">
+  Common Issues on Tiny10
+  <a class="heading-link" href="#common-issues-on-tiny10">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li><strong>Missing Components</strong>: Install Visual C++ Redistributables</li>
+<li><strong>Performance</strong>: Reduce RAM allocation if system has limited memory</li>
+<li><strong>Network Issues</strong>: Try different network backends:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-netdev user,id<span class="o">=</span>net0,hostfwd<span class="o">=</span>tcp::2222-:22
+</span></span><span class="line"><span class="cl"><span class="c1"># Or</span>
+</span></span><span class="line"><span class="cl">-netdev tap,id<span class="o">=</span>net0,ifname<span class="o">=</span>tap0,script<span class="o">=</span>no,downscript<span class="o">=</span>no
+</span></span></code></pre></div><h3 id="qemu-not-found">
+  QEMU Not Found
+  <a class="heading-link" href="#qemu-not-found">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Add MSYS2 to PATH or use full path</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;/mingw64/bin:</span><span class="nv">$PATH</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h3 id="slow-performance">
+  Slow Performance
+  <a class="heading-link" href="#slow-performance">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Enable KVM-like features (if supported)</span>
+</span></span><span class="line"><span class="cl">qemu-system-x86_64 -accel whpx  <span class="c1"># Windows Hypervisor Platform</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Or</span>
+</span></span><span class="line"><span class="cl">qemu-system-x86_64 -accel hax   <span class="c1"># Intel HAXM</span>
+</span></span></code></pre></div><h2 id="security-considerations">
+  Security Considerations
+  <a class="heading-link" href="#security-considerations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li><strong>Change default passwords</strong> immediately</li>
+<li><strong>Configure firewall</strong> inside the VM</li>
+<li><strong>Keep the VM updated</strong>: <code>sudo apt update &amp;&amp; sudo apt upgrade</code></li>
+<li><strong>Use SSH keys</strong> instead of passwords for remote access</li>
+<li><strong>Limit sudo access</strong> to necessary users only</li>
+</ol>
+<h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>This setup gives you a full Linux environment on Windows 10/Tiny10 without requiring Hyper-V or WSL. The combination of MSYS2 and QEMU provides excellent flexibility and performance, making it ideal for development, testing, or learning Linux administration.</p>
+<p>The sudo user setup ensures you have proper privilege separation while maintaining administrative access when needed. This approach is particularly valuable on minimal Windows installations where traditional virtualization solutions might not be available.</p>
+<h2 id="next-steps">
+  Next Steps
+  <a class="heading-link" href="#next-steps">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Install development tools in your Linux VM</li>
+<li>Set up file sharing between Windows and Linux</li>
+<li>Configure automated backups of your VM</li>
+<li>Explore QEMU&rsquo;s advanced networking features</li>
+<li>Set up multiple VMs for testing different distributions</li>
+</ul>
+<p>Happy virtualizing!</p>
+
       </div>
 
 

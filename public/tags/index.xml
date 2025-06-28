@@ -16,6 +16,20 @@
       <description></description>
     </item>
     <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/kaggwe-marvin-resume/tags/linux/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kaggwe-marvin-resume/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Msys2</title>
+      <link>http://localhost:1313/kaggwe-marvin-resume/tags/msys2/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kaggwe-marvin-resume/tags/msys2/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Ordin</title>
       <link>http://localhost:1313/kaggwe-marvin-resume/tags/ordin/</link>
       <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
@@ -30,10 +44,38 @@
       <description></description>
     </item>
     <item>
+      <title>Qemu</title>
+      <link>http://localhost:1313/kaggwe-marvin-resume/tags/qemu/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kaggwe-marvin-resume/tags/qemu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tiny10</title>
+      <link>http://localhost:1313/kaggwe-marvin-resume/tags/tiny10/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kaggwe-marvin-resume/tags/tiny10/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualization</title>
+      <link>http://localhost:1313/kaggwe-marvin-resume/tags/virtualization/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kaggwe-marvin-resume/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Web-Development</title>
       <link>http://localhost:1313/kaggwe-marvin-resume/tags/web-development/</link>
       <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/kaggwe-marvin-resume/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>http://localhost:1313/kaggwe-marvin-resume/tags/windows/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kaggwe-marvin-resume/tags/windows/</guid>
       <description></description>
     </item>
   </channel>

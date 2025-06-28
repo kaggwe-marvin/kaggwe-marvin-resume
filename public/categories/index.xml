@@ -15,5 +15,19 @@
       <guid>http://localhost:1313/kaggwe-marvin-resume/categories/development/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Tutorials</title>
+      <link>http://localhost:1313/kaggwe-marvin-resume/categories/tutorials/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kaggwe-marvin-resume/categories/tutorials/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualization</title>
+      <link>http://localhost:1313/kaggwe-marvin-resume/categories/virtualization/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/kaggwe-marvin-resume/categories/virtualization/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

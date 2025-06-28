@@ -1,12 +1,10 @@
 +++ 
-draft = true
-date = 2025-06-27T20:44:20-07:00
-title = ""
-description = ""
-slug = ""
-authors = []
-tags = []
-categories = []
+draft = false
+date = 2025-06-27
+title = 'MSYS2 QEMU Linux Setup Windows 10 Tiny10'
+description = "Complete guide to setting up Linux virtualization using MSYS2 and QEMU on Windows 10, including modified versions like Tiny10"
+tags = ["msys2", "qemu", "linux", "virtualization", "windows", "tiny10"]
+categories = ["tutorials", "virtualization"]
 externalLink = ""
 series = []
 +++
