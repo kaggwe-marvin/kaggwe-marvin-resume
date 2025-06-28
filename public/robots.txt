@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaggwe-marvin.github.io/kaggwe-marvin-resume/sitemap.xml

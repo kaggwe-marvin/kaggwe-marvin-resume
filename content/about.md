@@ -5,6 +5,7 @@ title = "About Kaggwe Marvin"
 description = "Learn about Kaggwe Marvin, a passionate software developer and indie hacker specializing in web development, with experience in modern frameworks and technologies."
 aliases = ["about-us", "about-hugo", "contact"]
 author = "Kaggwe Marvin" 
+slug = "about"
 +++
 
 ## About Me
