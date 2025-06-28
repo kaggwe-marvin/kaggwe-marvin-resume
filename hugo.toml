@@ -23,17 +23,11 @@ unsafe = true
 
 [params]
 author = "Kaggwe Marvin"
-description = "Kaggwe Marvin's personal website - Software Developer and Indie Hacker"
-keywords = "Kaggwe Marvin, software developer, indie hacker, web development, programming, portfolio"
-# Add Open Graph and Twitter Card settings
-images = ["images/og-image.jpg"]  # Create this image (1200x630px)
-
-# SEO metadata
-[params.seo]
-  title_separator = " | "
-  twitter_creator = "@kaggwe-marvin"
-  facebook_app_id = ""
-  google_site_verification = ""  # Add after setting up Google Search Console
+# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+description = "Kaggwe Marvin's personal website"
+keywords = "blog,developer,personal"
+info = ["Indie Hacker"]
+avatarURL = "images/avatar.jpg"
 
 dateFormat = "January 2, 2006"
 since = 2021
@@ -117,8 +111,3 @@ url = "contact/"
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
-
-# SEO improvements
-enableRobotsTXT = true
-canonifyURLs = true
-enableGitInfo = true
