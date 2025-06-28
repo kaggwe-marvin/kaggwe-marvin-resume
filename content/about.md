@@ -1,8 +1,8 @@
 +++
 date = '2025-06-27T13:45:13-07:00'
 draft = false
-title: "About Kaggwe Marvin"
-description: "Learn about Kaggwe Marvin, a passionate software developer and indie hacker specializing in web development, with experience in modern frameworks and technologies."
+title = "About Kaggwe Marvin"
+description = "Learn about Kaggwe Marvin, a passionate software developer and indie hacker specializing in web development, with experience in modern frameworks and technologies."
 aliases = ["about-us", "about-hugo", "contact"]
 author = "Kaggwe Marvin" 
 +++
