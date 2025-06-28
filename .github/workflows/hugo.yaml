@@ -34,7 +34,7 @@ jobs:
     env:
       HUGO_VERSION: 0.147.2
       HUGO_ENVIRONMENT: production
-      #TZ: Africa/Kampala
+      TZ: UTC
     steps:
       - name: Install Hugo CLI
         run: |

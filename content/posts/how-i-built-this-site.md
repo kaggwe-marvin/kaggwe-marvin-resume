@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2025-06-27T14:24:18-07:00
+date = 2025-06-27
 title = "How I Built This Site - My Journey with Hugo and the Ordin Project"
 description = "A walkthrough of building my portfolio site with Hugo and my experience working on the Ordin project"
 slug = "how-i-built-this-site"
