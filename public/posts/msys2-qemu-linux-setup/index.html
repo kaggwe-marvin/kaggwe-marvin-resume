@@ -3,7 +3,7 @@
 
 <head><script src="/kaggwe-marvin-resume/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=kaggwe-marvin-resume/livereload" data-no-instant defer></script>
   <title>
-  Posts · Kaggwe Marvin
+  {{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }} · Kaggwe Marvin
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,20 +19,21 @@
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Posts">
+  <meta name="twitter:title" content="{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}">
   <meta name="twitter:description" content="Kaggwe Marvin&#39;s personal website">
 
-<meta property="og:url" content="http://localhost:1313/kaggwe-marvin-resume/posts/">
+<meta property="og:url" content="http://localhost:1313/kaggwe-marvin-resume/posts/msys2-qemu-linux-setup/">
   <meta property="og:site_name" content="Kaggwe Marvin">
-  <meta property="og:title" content="Posts">
+  <meta property="og:title" content="{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}">
   <meta property="og:description" content="Kaggwe Marvin&#39;s personal website">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
 
 
 
 
-<link rel="canonical" href="http://localhost:1313/kaggwe-marvin-resume/posts/">
+<link rel="canonical" href="http://localhost:1313/kaggwe-marvin-resume/posts/msys2-qemu-linux-setup/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -73,7 +74,6 @@
 <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link rel="alternate" type="application/rss+xml" href="/kaggwe-marvin-resume/posts/index.xml" title="Kaggwe Marvin" />
 
 
 
@@ -139,32 +139,56 @@
 
     <div class="content">
       
-  <section class="container list">
-    <header>
-      <h1 class="title">
-        <a class="title-link" href="http://localhost:1313/kaggwe-marvin-resume/posts/">
-          Posts
-        </a>
-      </h1>
-    </header>
-    
-    <ul><li>
-  <span class="date">June 27, 2025</span>
-  <a class="title" href="/kaggwe-marvin-resume/posts/how-i-built-this-site/">How I Built This Site - My Journey with Hugo and the Ordin Project</a>
-</li>
-<li>
-  <span class="date">January 1, 0001</span>
-  <a class="title" href="/kaggwe-marvin-resume/posts/msys2-qemu-linux-setup/">{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}</a>
-</li>
-</ul>
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/kaggwe-marvin-resume/posts/msys2-qemu-linux-setup/">
+              {{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              0-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
 
     
-
-
-
-
-
-
   </section>
 
     </div>
