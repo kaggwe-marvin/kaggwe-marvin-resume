@@ -1,40 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Kaggwe Marvin</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Kaggwe Marvin</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 27 Jun 2025 14:24:18 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How I Built This Site - My Journey with Hugo and the Ordin Project</title>
-      <link>http://localhost:1313/posts/how-i-built-this-site/</link>
-      <pubDate>Fri, 27 Jun 2025 14:24:18 -0700</pubDate>
-      <guid>http://localhost:1313/posts/how-i-built-this-site/</guid>
-      <description>&lt;h2 id=&#34;how-i-built-this-site---my-journey-with-hugo-and-the-ordin-project&#34;&gt;&#xD;&#xA;  How I Built This Site - My Journey with Hugo and the Ordin Project&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#how-i-built-this-site---my-journey-with-hugo-and-the-ordin-project&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Building a personal portfolio site has been on my todo list for ages, but it wasn&amp;rsquo;t until I started working on the Ordin project that I finally made it happen. Here&amp;rsquo;s the story of how this site came together and what I learned along the way.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-hugo&#34;&gt;&#xD;&#xA;  Why Hugo?&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why-hugo&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;When I began the Ordin project, I needed to document my progress and showcase my work. I wanted something:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/projects/</link>
-      <pubDate>Fri, 27 Jun 2025 13:53:16 -0700</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
-      <description>&lt;p&gt;Cooming soon&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Contact</title>
-      <link>http://localhost:1313/contact/</link>
-      <pubDate>Fri, 27 Jun 2025 13:51:34 -0700</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
-      <description>&lt;h2 id=&#34;lets-connect-&#34;&gt;&#xD;&#xA;  Let&amp;rsquo;s Connect! 🚀&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#lets-connect-&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Ready to collaborate, discuss opportunities, or just chat about tech? I&amp;rsquo;d love to hear from you!&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-in-touch&#34;&gt;&#xD;&#xA;  Get In Touch&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#get-in-touch&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;-email&#34;&gt;&#xD;&#xA;  📧 Email&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-email&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;mailto:kaggwemarvin@gmail.com&#34; &gt;kaggwemarvin@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&#xA;&lt;em&gt;Best for: Job opportunities, project inquiries, detailed discussions&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;-linkedin&#34;&gt;&#xD;&#xA;  💼 LinkedIn&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-linkedin&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://linkedin.com/in/yourprofile&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;linkedin.com/in/yourprofile&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&#xA;&lt;em&gt;Best for: Professional networking, career updates&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Fri, 27 Jun 2025 13:45:13 -0700</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;about-me&#34;&gt;&#xD;&#xA;  About Me&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#about-me&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Hi, I&amp;rsquo;m &lt;strong&gt;Kaggwe Marvin&lt;/strong&gt; - a passionate software developer based in Kampala, Uganda. I love building things that live on the internet and solving complex problems through code.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-journey&#34;&gt;&#xD;&#xA;  My Journey&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#my-journey&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;My journey into software development began with curiosity and has evolved into a deep passion for creating meaningful digital experiences. Currently, I&amp;rsquo;m working on the &lt;strong&gt;Ordin project&lt;/strong&gt;, which has been instrumental in shaping my development philosophy and technical skills.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kaggwe Marvin</title><link>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/</link><description>Recent content on Kaggwe Marvin</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 27 Jun 2025 14:24:18 -0700</lastBuildDate><atom:link href="https://kaggwe-marvin.github.io/kaggwe-marvin-resume/index.xml" rel="self" type="application/rss+xml"/><item><title>How I Built This Site - My Journey with Hugo and the Ordin Project</title><link>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/posts/how-i-built-this-site/</link><pubDate>Fri, 27 Jun 2025 14:24:18 -0700</pubDate><guid>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/posts/how-i-built-this-site/</guid><description>&lt;h2 id="how-i-built-this-site---my-journey-with-hugo-and-the-ordin-project">
+ How I Built This Site - My Journey with Hugo and the Ordin Project
+ &lt;a class="heading-link" href="#how-i-built-this-site---my-journey-with-hugo-and-the-ordin-project">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Building a personal portfolio site has been on my todo list for ages, but it wasn&amp;rsquo;t until I started working on the Ordin project that I finally made it happen. Here&amp;rsquo;s the story of how this site came together and what I learned along the way.&lt;/p>
+&lt;h2 id="why-hugo">
+ Why Hugo?
+ &lt;a class="heading-link" href="#why-hugo">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>When I began the Ordin project, I needed to document my progress and showcase my work. I wanted something:&lt;/p></description></item><item><title>Projects</title><link>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/projects/</link><pubDate>Fri, 27 Jun 2025 13:53:16 -0700</pubDate><guid>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/projects/</guid><description>&lt;p>Cooming soon&lt;/p></description></item><item><title>Contact</title><link>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/contact/</link><pubDate>Fri, 27 Jun 2025 13:51:34 -0700</pubDate><guid>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/contact/</guid><description>&lt;h2 id="lets-connect-">
+ Let&amp;rsquo;s Connect! 🚀
+ &lt;a class="heading-link" href="#lets-connect-">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Ready to collaborate, discuss opportunities, or just chat about tech? I&amp;rsquo;d love to hear from you!&lt;/p>
+&lt;h2 id="get-in-touch">
+ Get In Touch
+ &lt;a class="heading-link" href="#get-in-touch">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h3 id="-email">
+ 📧 Email
+ &lt;a class="heading-link" href="#-email">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="mailto:kaggwemarvin@gmail.com" >kaggwemarvin@gmail.com&lt;/a>&lt;/strong>&lt;br>
+&lt;em>Best for: Job opportunities, project inquiries, detailed discussions&lt;/em>&lt;/p>
+&lt;h3 id="-linkedin">
+ 💼 LinkedIn
+ &lt;a class="heading-link" href="#-linkedin">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="https://linkedin.com/in/yourprofile" class="external-link" target="_blank" rel="noopener">linkedin.com/in/yourprofile&lt;/a>&lt;/strong>&lt;br>
+&lt;em>Best for: Professional networking, career updates&lt;/em>&lt;/p></description></item><item><title>About</title><link>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/about/</link><pubDate>Fri, 27 Jun 2025 13:45:13 -0700</pubDate><guid>https://kaggwe-marvin.github.io/kaggwe-marvin-resume/about/</guid><description>&lt;h2 id="about-me">
+ About Me
+ &lt;a class="heading-link" href="#about-me">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Hi, I&amp;rsquo;m &lt;strong>Kaggwe Marvin&lt;/strong> - a passionate software developer based in Kampala, Uganda. I love building things that live on the internet and solving complex problems through code.&lt;/p>
+&lt;h2 id="my-journey">
+ My Journey
+ &lt;a class="heading-link" href="#my-journey">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>My journey into software development began with curiosity and has evolved into a deep passion for creating meaningful digital experiences. Currently, I&amp;rsquo;m working on the &lt;strong>Ordin project&lt;/strong>, which has been instrumental in shaping my development philosophy and technical skills.&lt;/p></description></item></channel></rss>
