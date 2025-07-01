@@ -16,10 +16,10 @@ Ready to collaborate, discuss opportunities, or just chat about tech? I'd love t
 **<kaggwemarvin@gmail.com>**  
 *Best for: Job opportunities, project inquiries, detailed discussions*
 
-### 💼 LinkedIn
+### 💼 WhatsApp
 
-**[linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)**  
-*Best for: Professional networking, career updates*
+**WhatsApp(<https://wa.me/+256788320104>)**  
+*Best for: for Instant Reply*
 
 ### 🐙 GitHub
 

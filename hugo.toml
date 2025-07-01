@@ -77,10 +77,10 @@ weight = 3
 url = "https://twitter.com/kaggwe-marvin/"
 
 [[params.social]]
-name = "LinkedIn"
-icon = "fa-brands fa-linkedin fa-2x"
+name = "WhatsApp"
+icon = "fa-brands fa-whatsapp fa-2x"
 weight = 4
-url = "https://www.linkedin.com/in/kaggwe-marvin/"
+url = "https://wa.me/+256788320104"
 
 
 
