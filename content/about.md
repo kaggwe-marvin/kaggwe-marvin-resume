@@ -10,7 +10,7 @@ slug = "about"
 
 ## About Me
 
-I'm **Kaggwe Marvin**, a passionate software developer and indie hacker based in [Your Location]. With expertise in modern web technologies, I create innovative solutions and share my journey through code.
+I'm **Kaggwe Marvin**, a passionate software developer and indie hacker based in Kampala. With expertise in modern web technologies, I create innovative solutions and share my journey through code.
 
 ## What I Do
 
@@ -18,12 +18,13 @@ I'm **Kaggwe Marvin**, a passionate software developer and indie hacker based in
 - Open source contributions
 - Technical writing and blogging
 - Building indie projects
+- Intergrations
 
 ## Technologies I Work With
 
-- Frontend: React, Vue.js, HTML5, CSS3, JavaScript
-- Backend: Node.js, Python, Go
-- Tools: Git, Docker, Hugo, Linux
+- Frontend: JSX, HTML5, CSS3, JavaScript
+- Backend: Node.js, Python
+- Tools: Git, podman, Hugo, Linux
 
 ## Get In Touch
 
