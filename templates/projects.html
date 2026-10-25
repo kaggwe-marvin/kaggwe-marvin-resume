@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block jsonld %}{% for app in page.extra.apps %},
+            {
+                "@type": "SoftwareApplication",
+                "name": {{ app.name | json_encode() | safe }},
+                "description": {{ app.description | json_encode() | safe }},
+                "operatingSystem": {{ app.platform | json_encode() | safe }},
+                "applicationCategory": {{ app.category | default(value="UtilitiesApplication") | json_encode() | safe }},
+                "url": "{{ current_url }}",
+                "downloadUrl": "https://github.com/{{ app.repo }}/releases/latest",
+                "sameAs": "https://github.com/{{ app.repo }}",
+                "isAccessibleForFree": true,
+                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+                "author": {"@id": "{{ config.extra.main_site }}/#person"}
+            }{% endfor %}{% endblock jsonld %}
+
+{% block content %}
+<h1 class="page-title">{{ page.title }}</h1>
+<p class="lead">{{ page.extra.intro }}</p>
+
+<h2 class="label">Software</h2>
+{% for app in page.extra.apps %}
+<article class="card card-yellow release" data-repo="{{ app.repo }}">
+    <div class="row">
+        <h3><a href="https://github.com/{{ app.repo }}">{{ app.name }}</a></h3>
+        <span class="badge release-version">{{ app.platform }}</span>
+    </div>
+    <p>{{ app.description }}</p>
+    <div class="actions release-files">
+        <a class="btn" href="https://github.com/{{ app.repo }}/releases/latest">Download latest release</a>
+    </div>
+    {% if app.post %}<p><a href="{{ get_url(path='@/' ~ app.post) }}">Why I built it &rarr;</a></p>{% endif %}
+    {% if app.note %}<p class="small">{{ app.note }}</p>{% endif %}
+</article>
+{% endfor %}
+
+<h2 class="label">Websites</h2>
+<div class="grid">
+    {% for site in page.extra.sites %}
+    <article class="card">
+        <h3><a href="{{ site.url }}">{{ site.name }}</a></h3>
+        <p class="small"><a href="{{ site.url }}">{{ site.url | replace(from="https://", to="") }}</a></p>
+        <p>{{ site.description }}</p>
+        <ul class="chips">
+            {% for tech in site.stack %}
+            <li>{{ tech }}</li>
+            {% endfor %}
+        </ul>
+        {% if site.source %}<p class="small"><a href="{{ site.source }}">Source code</a></p>{% endif %}
+    </article>
+    {% endfor %}
+</div>
+
+<h2 class="label">Code</h2>
+<div class="grid">
+    {% for item in page.extra.code %}
+    <article class="card card-cyan">
+        <h3><a href="{{ item.url }}">{{ item.name }}</a></h3>
+        <p>{{ item.description }}</p>
+    </article>
+    {% endfor %}
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    // Fill each app with its latest GitHub release. The static link above stays if this fails.
+    const labels = [
+        [/setup|installer/i, 'Installer', true],
+        [/portable/i, 'Portable .exe', false],
+        [/sha256|checksum/i, 'Checksums', false],
+    ];
+
+    const sizeText = bytes => bytes >= 1048576 ? `${(bytes / 1048576).toFixed(1)} MB` : `${Math.ceil(bytes / 1024)} KB`;
+
+    const dateText = iso => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+    function link(asset) {
+        const match = labels.find(([pattern]) => pattern.test(asset.name));
+        const a = document.createElement('a');
+        a.href = asset.browser_download_url;
+        a.className = match && match[2] ? 'btn' : 'btn btn-white';
+        a.textContent = match ? match[1] : asset.name;
+        if (!/sha256|checksum/i.test(asset.name)) {
+            a.textContent += ` · ${sizeText(asset.size)}`;
+        }
+        return a;
+    }
+
+    document.querySelectorAll('.release').forEach(async card => {
+        try {
+            const res = await fetch(`https://api.github.com/repos/${card.dataset.repo}/releases/latest`);
+            if (!res.ok) return;
+            const release = await res.json();
+            if (!release.assets.length) return;
+
+            const order = asset => {
+                const i = labels.findIndex(([pattern]) => pattern.test(asset.name));
+                return i === -1 ? labels.length : i;
+            };
+            card.querySelector('.release-files').replaceChildren(
+                ...[...release.assets].sort((a, b) => order(a) - order(b)).map(link));
+            card.querySelector('.release-version').textContent =
+                `${release.tag_name} · ${dateText(release.published_at)}`;
+        } catch (err) {
+            // Network or rate-limit problem: keep the static link.
+        }
+    });
+</script>
+{% endblock scripts %}

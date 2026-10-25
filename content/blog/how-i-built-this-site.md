@@ -5,6 +5,11 @@ date = 2025-06-27
 updated = 2026-10-25
 template = "post.html"
 aliases = ["posts/how-i-built-this-site/"]
+
+[extra]
+# The main site holds the original copy of this post
+canonical = "https://kaggwe-marvin.github.io/Personal-Resume/blog/how-i-built-this-site/"
+
 +++
 
 > **Update, October 2026:** this site no longer runs on Hugo. I rebuilt it with [Zola](https://www.getzola.org/) and my own small template. The second half of this post explains why.

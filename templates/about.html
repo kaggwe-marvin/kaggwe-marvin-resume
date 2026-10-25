@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block jsonld %},
+            {
+                "@type": "AboutPage",
+                "@id": "{{ current_url }}#page",
+                "url": "{{ current_url }}",
+                "name": {{ page.title | json_encode() | safe }},
+                "description": {{ page.description | json_encode() | safe }},
+                "isPartOf": {"@id": "{{ config.base_url }}/#website"},
+                "mainEntity": {"@id": "{{ config.extra.main_site }}/#person"}
+            }{% endblock jsonld %}
+
+{% block content %}
+<h1 class="page-title">{{ page.title }}</h1>
+<div class="card prose">
+    {{ page.content | safe }}
+</div>
+<div class="actions">
+    <a class="btn" href="{{ config.extra.main_site }}/">Full resume</a>
+    <a class="btn btn-white" href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
+    <a class="btn btn-white" href="https://{{ config.extra.github }}" rel="me">GitHub</a>
+</div>
+{% endblock content %}

@@ -5,6 +5,11 @@ date = 2025-06-27
 updated = 2026-10-25
 template = "post.html"
 aliases = ["posts/msys2-qemu-linux-setup/"]
+
+[extra]
+# The main site holds the original copy of this post
+canonical = "https://kaggwe-marvin.github.io/Personal-Resume/blog/msys2-qemu-linux-setup/"
+
 +++
 
 > **Updated October 2026:** fixed commands that do not work on Windows (`-daemonize`, `-cpu host` without acceleration, `taskkill` flags in MSYS2) and removed an install step for a package that does not exist.

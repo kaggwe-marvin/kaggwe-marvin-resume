@@ -1,10 +1,11 @@
 +++
-title = "Blog | Kaggwe Marvin Victor"
-description = "Notes on the software I build: what problem it solves and what I learned."
-template = "blog.html"
+title = "Blog"
+description = "Notes and tutorials by Kaggwe Marvin on MikroTik RouterOS, running Linux on Windows with QEMU, and building websites."
+template = "list.html"
 sort_by = "date"
+generate_feeds = true
 aliases = ["posts/"]
 
 [extra]
-intro = "Notes on the software I build: the problem behind it, how it works and what I learned."
+intro = "Notes and tutorials: the problem, the fix, and what I learned."
 +++

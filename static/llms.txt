@@ -1,0 +1,29 @@
+# Kaggwe Marvin: Notes
+
+> Notes, tutorials and projects by Kaggwe Marvin Victor, a full-stack developer in Kampala, Uganda. This is his blog-first site. His full resume is at https://kaggwe-marvin.github.io/Personal-Resume/, which is also the original home of the posts below.
+
+## About the author
+
+- Name: Kaggwe Marvin Victor (also written Marvin Kaggwe)
+- Role: Full-Stack Developer, Kampala, Uganda
+- Education: Bachelor of Business Computing, Makerere University Business School, graduating February 2027 (CGPA 3.95/5.0)
+- Skills: Python, Django, TypeScript, SQL, GitHub Actions, MikroTik RouterOS, Linux
+- Open to junior developer, business systems and IT roles
+- Contact: kaggwemarvin@gmail.com, https://github.com/kaggwe-marvin
+
+## Pages
+
+- [Home](https://kaggwe-marvin.github.io/kaggwe-marvin-resume/): introduction, latest posts and featured projects
+- [Blog](https://kaggwe-marvin.github.io/kaggwe-marvin-resume/blog/): notes and tutorials
+- [Projects](https://kaggwe-marvin.github.io/kaggwe-marvin-resume/projects/): software downloads, websites and code
+- [About](https://kaggwe-marvin.github.io/kaggwe-marvin-resume/about/): short bio and contact
+
+## Posts
+
+- [Why I built Voucher Manager: printing hotspot vouchers on RouterOS 7](https://kaggwe-marvin.github.io/Personal-Resume/blog/voucher-manager-routeros-7/): RouterOS 7 User Manager needs five manual steps to produce printable vouchers (create users, attach a profile to each, run generate-voucher on exactly those users, fetch the generated HTML from um5files/PRIVATE/GENERATED/vouchers/, print). Voucher Manager does all five through the RouterOS API.
+- [Run Linux on Windows 10 or Tiny10 with MSYS2 and QEMU](https://kaggwe-marvin.github.io/Personal-Resume/blog/msys2-qemu-linux-setup/): install QEMU in the MSYS2 MINGW64 environment, use -accel whpx (or -accel tcg -cpu max), forward port 2222 to SSH, and run it in the background without -daemonize, which Windows does not support.
+- [How I built my first site: from Hugo to Zola](https://kaggwe-marvin.github.io/Personal-Resume/blog/how-i-built-this-site/): lessons from moving a personal site from Hugo and hugo-coder to Zola with a custom template.
+
+## Software
+
+- [Voucher Manager](https://github.com/kaggwe-marvin/Voucher-Manager): free Windows 10/11 app for MikroTik RouterOS 7 User Manager hotspot vouchers. Download: https://kaggwe-marvin.github.io/kaggwe-marvin-resume/projects/

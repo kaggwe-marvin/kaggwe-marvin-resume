@@ -3,6 +3,11 @@ title = "Why I built Voucher Manager: printing hotspot vouchers on RouterOS 7"
 description = "MikroTik's User Manager in RouterOS 7 can make vouchers, but it takes five separate steps. Here is what those steps are and how I turned them into one button."
 date = 2026-10-25
 template = "post.html"
+
+[extra]
+# The main site holds the original copy of this post
+canonical = "https://kaggwe-marvin.github.io/Personal-Resume/blog/voucher-manager-routeros-7/"
+
 +++
 
 If you run a Wi-Fi hotspot on a MikroTik router, you sell access with vouchers: small printed cards with a username and password. A customer pays, gets a card, and logs in.
@@ -69,7 +74,7 @@ You can make up to 500 vouchers per batch, with an optional username prefix so y
 
 Voucher Manager is free and open source. It needs Windows 10 or 11, and your router needs the API and FTP services turned on, a voucher template in Files, and at least one profile and user group.
 
-- [Download the latest version](@/downloads.md)
+- [Download the latest version](@/projects.md)
 - [Source code on GitHub](https://github.com/kaggwe-marvin/Voucher-Manager)
 
 If you run a MikroTik hotspot and try it, I would like to hear how it goes.

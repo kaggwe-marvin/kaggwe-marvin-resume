@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block jsonld %},
+            {
+                "@type": "Blog",
+                "@id": "{{ current_url }}#blog",
+                "url": "{{ current_url }}",
+                "name": {{ config.title | json_encode() | safe }},
+                "description": {{ section.description | json_encode() | safe }},
+                "author": {"@id": "{{ config.extra.main_site }}/#person"},
+                "blogPost": [{% for post in section.pages %}
+                    {"@type": "BlogPosting", "headline": {{ post.title | json_encode() | safe }}, "url": "{{ post.extra.canonical | default(value=post.permalink) }}", "datePublished": "{{ post.date }}"}{% if not loop.last %},{% endif %}{% endfor %}
+                ]
+            }{% endblock jsonld %}
+
+{% block content %}
+<h1 class="page-title">{{ section.title }}</h1>
+<p class="lead">{{ section.extra.intro }}</p>
+
+{% for post in section.pages %}
+<article class="card post-item">
+    <p class="meta"><time datetime="{{ post.date }}">{{ post.date | date(format="%-d %b %Y") }}</time> · {{ post.reading_time }} min</p>
+    <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+    <p>{{ post.description }}</p>
+</article>
+{% endfor %}
+{% endblock content %}

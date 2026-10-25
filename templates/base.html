@@ -4,39 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %}</title>
-    <meta name="description" content="{% block description %}{% endblock description %}">
+    {%- set page_url = current_url | default(value=config.base_url ~ "/") %}
+    {%- set image_url = get_url(path=config.extra.og_image) %}
+    {%- set person_id = config.extra.main_site ~ "/#person" %}
+    {%- set cp = current_path | default(value="") %}
+    {%- set seo_title = config.title %}
+    {%- set seo_desc = config.description %}
+    {%- set og_type = "website" %}
+    {%- set canonical = page_url %}
+    {%- if page %}
+        {%- set seo_title = page.title %}
+        {%- set seo_desc = page.description | default(value=config.description) %}
+        {%- if page.date %}{% set og_type = "article" %}{% endif %}
+        {%- if page.extra.canonical %}{% set canonical = page.extra.canonical %}{% endif %}
+    {%- elif section %}
+        {%- set seo_title = section.title | default(value=config.title) %}
+        {%- set seo_desc = section.description | default(value=config.description) %}
+    {%- endif %}
+    {%- if config.extra.short_name not in seo_title %}{% set seo_title = seo_title ~ " | " ~ config.extra.short_name %}{% endif %}
+    <title>{{ seo_title }}</title>
+    <meta name="description" content="{{ seo_desc }}">
+    <meta name="author" content="{{ config.extra.name }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="{{ canonical }}">
+    {%- if config.extra.google_site_verification %}
+    <meta name="google-site-verification" content="{{ config.extra.google_site_verification }}">
+    {%- endif %}
+    {%- if config.extra.bing_site_verification %}
+    <meta name="msvalidate.01" content="{{ config.extra.bing_site_verification }}">
+    {%- endif %}
+
+    <meta property="og:site_name" content="{{ config.title }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="{{ og_type }}">
+    <meta property="og:title" content="{{ seo_title }}">
+    <meta property="og:description" content="{{ seo_desc }}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:image" content="{{ image_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ config.extra.og_image_alt }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ seo_title }}">
+    <meta name="twitter:description" content="{{ seo_desc }}">
+    <meta name="twitter:image" content="{{ image_url }}">
+
+    <link rel="icon" href="{{ get_url(path='images/favicon.svg') }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ get_url(path='images/apple-touch-icon.png') }}">
+    <meta name="theme-color" content="#FFD23F">
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='blog/atom.xml') }}">
     <link rel="stylesheet" href="{{ get_url(path='css/style.css', cachebust=true) }}">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "{{ person_id }}",
+                "name": {{ config.extra.name | json_encode() | safe }},
+                "alternateName": {{ config.extra.short_name | json_encode() | safe }},
+                "jobTitle": {{ config.extra.role | json_encode() | safe }},
+                "url": "{{ config.extra.main_site }}/",
+                "email": "mailto:{{ config.extra.email }}",
+                "address": {"@type": "PostalAddress", "addressLocality": "Kampala", "addressCountry": "UG"},
+                "alumniOf": {"@type": "CollegeOrUniversity", "name": "Makerere University Business School"},
+                "knowsAbout": {{ config.extra.knows_about | json_encode() | safe }},
+                "sameAs": {{ config.extra.same_as | json_encode() | safe }}
+            },
+            {
+                "@type": "WebSite",
+                "@id": "{{ config.base_url }}/#website",
+                "url": "{{ config.base_url }}/",
+                "name": {{ config.title | json_encode() | safe }},
+                "description": {{ config.description | json_encode() | safe }},
+                "inLanguage": "en",
+                "author": {"@id": "{{ person_id }}"},
+                "publisher": {"@id": "{{ person_id }}"}
+            }{% block jsonld %}{% endblock jsonld %}
+        ]
+    }
+    </script>
 </head>
 
 <body>
-    <main class="page">
-        <header class="header">
-            <div>
-                <p class="name">{{ config.extra.name }}</p>
-                <p class="role">{{ config.extra.role }}</p>
-            </div>
-            <ul class="contact">
-                <li>{{ config.extra.location }}</li>
-                <li><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a></li>
-                <li><a href="tel:{{ config.extra.phone | replace(from=' ', to='') }}">{{ config.extra.phone }}</a></li>
-                <li><a href="https://{{ config.extra.github }}">{{ config.extra.github }}</a></li>
-            </ul>
-        </header>
-
-        <nav class="tabs" aria-label="Site">
-            <a href="{{ get_url(path='/') }}" {% block nav_resume %}{% endblock nav_resume %}>Resume</a>
-            <a href="{{ get_url(path='/blog/') }}" {% block nav_blog %}{% endblock nav_blog %}>Blog</a>
-            <a href="{{ get_url(path='/websites/') }}" {% block nav_websites %}{% endblock nav_websites %}>Websites</a>
-            <a href="{{ get_url(path='/downloads/') }}" {% block nav_downloads %}{% endblock nav_downloads %}>Downloads</a>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+        <a class="brand" href="{{ get_url(path='/') }}">{{ config.extra.short_name }}</a>
+        <nav class="nav" aria-label="Site">
+            <a href="{{ get_url(path='/') }}" {% if cp == "/" %}aria-current="page"{% endif %}>Home</a>
+            <a href="{{ get_url(path='/blog/') }}" {% if "/blog" in cp %}aria-current="page"{% endif %}>Blog</a>
+            <a href="{{ get_url(path='/projects/') }}" {% if "/projects" in cp %}aria-current="page"{% endif %}>Projects</a>
+            <a href="{{ get_url(path='/about/') }}" {% if "/about" in cp %}aria-current="page"{% endif %}>About</a>
         </nav>
+    </header>
 
+    <main id="main" class="wrap">
         {% block content %}{% endblock content %}
-
-        <footer class="footer">
-            <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.name }}</p>
-        </footer>
     </main>
+
+    <footer class="site-footer">
+        <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.name }}</p>
+        <p>
+            <a href="{{ config.extra.main_site }}/">Resume</a> ·
+            <a href="https://{{ config.extra.github }}" rel="me">GitHub</a> ·
+            <a href="mailto:{{ config.extra.email }}">Email</a> ·
+            <a href="{{ get_url(path='blog/atom.xml') }}">RSS</a>
+        </p>
+    </footer>
     {% block scripts %}{% endblock scripts %}
 </body>
 

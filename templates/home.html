@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block jsonld %},
+            {
+                "@type": "CollectionPage",
+                "@id": "{{ current_url }}#page",
+                "url": "{{ current_url }}",
+                "name": {{ section.title | json_encode() | safe }},
+                "description": {{ section.description | json_encode() | safe }},
+                "isPartOf": {"@id": "{{ config.base_url }}/#website"},
+                "about": {"@id": "{{ config.extra.main_site }}/#person"}
+            }{% endblock jsonld %}
+
+{% block content %}
+{%- set blog = get_section(path="blog/_index.md") %}
+<section class="hero card card-yellow">
+    <h1>{{ section.extra.hello }}</h1>
+    <p class="lead">{{ section.extra.intro }}</p>
+    <ul class="chips">
+        {% for topic in section.extra.topics %}
+        <li>{{ topic }}</li>
+        {% endfor %}
+    </ul>
+    <div class="actions">
+        <a class="btn" href="{{ get_url(path='/blog/') }}">Read the blog</a>
+        <a class="btn btn-white" href="{{ config.extra.main_site }}/">See my resume</a>
+    </div>
+</section>
+
+<section>
+    <h2 class="label">Latest posts</h2>
+    {% for post in blog.pages %}{% if loop.index <= 3 %}
+    <article class="card post-item">
+        <p class="meta"><time datetime="{{ post.date }}">{{ post.date | date(format="%-d %b %Y") }}</time> · {{ post.reading_time }} min</p>
+        <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+        <p>{{ post.description }}</p>
+    </article>
+    {% endif %}{% endfor %}
+    <p><a class="btn btn-white" href="{{ get_url(path='/blog/') }}">All posts</a></p>
+</section>
+
+<section>
+    <h2 class="label">Things I built</h2>
+    <div class="grid">
+        {% for item in section.extra.featured %}
+        <article class="card card-cyan">
+            <h3><a href="{% if '://' in item.url %}{{ item.url }}{% else %}{{ get_url(path=item.url) }}{% endif %}">{{ item.name }}</a></h3>
+            <p>{{ item.blurb }}</p>
+        </article>
+        {% endfor %}
+    </div>
+    <p><a class="btn btn-white" href="{{ get_url(path='/projects/') }}">All projects</a></p>
+</section>
+{% endblock content %}
