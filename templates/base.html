@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <meta name="description" content="{% block description %}{% endblock description %}">
+    <link rel="stylesheet" href="{{ get_url(path='css/style.css', cachebust=true) }}">
+</head>
+
+<body>
+    <main class="page">
+        <header class="header">
+            <div>
+                <p class="name">{{ config.extra.name }}</p>
+                <p class="role">{{ config.extra.role }}</p>
+            </div>
+            <ul class="contact">
+                <li>{{ config.extra.location }}</li>
+                <li><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a></li>
+                <li><a href="tel:{{ config.extra.phone | replace(from=' ', to='') }}">{{ config.extra.phone }}</a></li>
+                <li><a href="https://{{ config.extra.github }}">{{ config.extra.github }}</a></li>
+            </ul>
+        </header>
+
+        <nav class="tabs" aria-label="Site">
+            <a href="{{ get_url(path='/') }}" {% block nav_resume %}{% endblock nav_resume %}>Resume</a>
+            <a href="{{ get_url(path='/blog/') }}" {% block nav_blog %}{% endblock nav_blog %}>Blog</a>
+            <a href="{{ get_url(path='/websites/') }}" {% block nav_websites %}{% endblock nav_websites %}>Websites</a>
+            <a href="{{ get_url(path='/downloads/') }}" {% block nav_downloads %}{% endblock nav_downloads %}>Downloads</a>
+        </nav>
+
+        {% block content %}{% endblock content %}
+
+        <footer class="footer">
+            <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.name }}</p>
+        </footer>
+    </main>
+    {% block scripts %}{% endblock scripts %}
+</body>
+
+</html>

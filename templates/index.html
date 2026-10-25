@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock title %}
+{% block description %}{{ section.description }}{% endblock description %}
+{% block nav_resume %}aria-current="page"{% endblock nav_resume %}
+
+{% block content %}
+<h1 class="visually-hidden">{{ config.extra.name }}: Resume</h1>
+
+<section>
+    <h2>Profile</h2>
+    <p>{{ section.extra.profile }}</p>
+</section>
+
+<section>
+    <h2>Work experience</h2>
+    {% for job in section.extra.experience %}
+    <article class="entry">
+        <div class="entry-head">
+            <h3>{{ job.title }}</h3>
+            <span class="period">{{ job.period }}</span>
+        </div>
+        <p class="where">{{ job.company }}</p>
+        <ul>
+            {% for point in job.points %}
+            <li>{{ point }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+    {% endfor %}
+</section>
+
+<section>
+    <h2>Projects</h2>
+    <div class="projects">
+        {% for project in section.extra.projects %}
+        <article class="project">
+            <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
+            <p>{{ project.description }}</p>
+            <ul class="tags">
+                {% for tech in project.stack %}
+                <li>{{ tech }}</li>
+                {% endfor %}
+            </ul>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h2>Education</h2>
+    {% for edu in section.extra.education %}
+    <article class="entry">
+        <div class="entry-head">
+            <h3>{{ edu.degree }}</h3>
+            <span class="period">{{ edu.period }}</span>
+        </div>
+        <p class="where">{{ edu.school }}</p>
+        <p>{{ edu.details }}</p>
+        <p class="units"><strong>Relevant course units:</strong> {{ edu.units }}</p>
+    </article>
+    {% endfor %}
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <dl class="skills">
+        {% for skill in section.extra.skills %}
+        <dt>{{ skill.group }}</dt>
+        <dd>{{ skill.items }}</dd>
+        {% endfor %}
+    </dl>
+</section>
+
+<section>
+    <h2>Languages</h2>
+    <p>{% for lang in section.extra.languages %}{{ lang.name }} ({{ lang.level | lower }}){% if not loop.last %}, {% endif %}{% endfor %}</p>
+</section>
+{% endblock content %}
