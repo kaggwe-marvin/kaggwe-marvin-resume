@@ -1,6 +1,6 @@
 +++
 title = "About"
-description = "About Kaggwe Marvin: full-stack developer in Kampala, Uganda, and final-year Business Computing student at Makerere University Business School."
+description = "About Kaggwe Marvin Victor: full-stack developer in Kampala, Uganda, and final-year Business Computing student at Makerere University Business School."
 template = "about.html"
 aliases = ["contact/"]
 +++

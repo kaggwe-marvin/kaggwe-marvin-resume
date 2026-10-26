@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://kaggwemarvinvictor.me"
-title = "Kaggwe Marvin: Notes"
-description = "Notes, tutorials and projects by Kaggwe Marvin, a freelance developer in Kampala, Uganda, writing about MikroTik RouterOS, Linux on Windows and building for the web."
+title = "Kaggwe Marvin Victor: Notes"
+description = "Notes, tutorials and projects by Kaggwe Marvin Victor, a freelance developer in Kampala, Uganda, writing about MikroTik RouterOS, Linux on Windows and building for the web."
 default_language = "en"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -16,7 +16,8 @@ feed_filenames = ["atom.xml"]
 
 [extra]
 name = "Kaggwe Marvin Victor"
-short_name = "Kaggwe Marvin"
+short_name = "Kaggwe Marvin Victor"
+alternate_names = ["Kaggwe Marvin", "Marvin Kaggwe", "Marvin Victor Kaggwe", "Kaggwe Victor"]
 role = "Full-Stack Developer"
 location = "Kampala, Uganda"
 email = "kaggwemarvin@gmail.com"
@@ -29,7 +30,7 @@ hire_url = "https://resume.kaggwemarvinvictor.me/hire/"
 
 # Search and social
 og_image = "images/og.png"
-og_image_alt = "Kaggwe Marvin: notes, tutorials and projects"
+og_image_alt = "Kaggwe Marvin Victor: notes, tutorials and projects"
 same_as = [
     "https://github.com/kaggwe-marvin",
     "https://resume.kaggwemarvinvictor.me/",

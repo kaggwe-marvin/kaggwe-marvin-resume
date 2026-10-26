@@ -1,4 +1,4 @@
-# Kaggwe Marvin: Notes
+# Kaggwe Marvin Victor: Notes
 
 > Notes, tutorials and projects by Kaggwe Marvin Victor, a full-stack developer in Kampala, Uganda. This is his blog-first site. His full resume is at https://resume.kaggwemarvinvictor.me/, which is also the original home of the posts below.
 

@@ -70,7 +70,7 @@
                 "@type": "Person",
                 "@id": "{{ person_id }}",
                 "name": {{ config.extra.name | json_encode() | safe }},
-                "alternateName": {{ config.extra.short_name | json_encode() | safe }},
+                "alternateName": {{ config.extra.alternate_names | json_encode() | safe }},
                 "jobTitle": {{ config.extra.role | json_encode() | safe }},
                 "url": "{{ config.extra.main_site }}/",
                 "email": "mailto:{{ config.extra.email }}",

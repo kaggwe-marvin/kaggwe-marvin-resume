@@ -1,6 +1,6 @@
 +++
 title = "Projects"
-description = "Software and websites built by Kaggwe Marvin: Voucher Manager for MikroTik RouterOS, FoundUG, Penzi's Cocktail Bar and more."
+description = "Software and websites built by Kaggwe Marvin Victor: Voucher Manager for MikroTik RouterOS, FoundUG, Penzi's Cocktail Bar and more."
 template = "projects.html"
 
 [extra]

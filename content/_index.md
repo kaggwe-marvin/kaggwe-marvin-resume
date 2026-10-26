@@ -1,6 +1,6 @@
 +++
-title = "Kaggwe Marvin: Notes, tutorials and projects"
-description = "Notes, tutorials and projects by Kaggwe Marvin, a freelance developer in Kampala, Uganda, writing about MikroTik RouterOS, Linux on Windows and building for the web."
+title = "Kaggwe Marvin Victor: Notes, tutorials and projects"
+description = "Notes, tutorials and projects by Kaggwe Marvin Victor, a freelance developer in Kampala, Uganda, writing about MikroTik RouterOS, Linux on Windows and building for the web."
 template = "home.html"
 
 [extra]
