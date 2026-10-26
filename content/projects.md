@@ -32,7 +32,7 @@ source = "https://github.com/kaggwe-marvin/foundug"
 
 [[extra.sites]]
 name = "Penzi's Cocktail Bar"
-url = "https://kaggwe-marvin.github.io/penzi"
+url = "https://resume.kaggwemarvinvictor.me/penzi"
 description = "Website for a cocktail bar, with its menu of signature drinks, an about page and event bookings."
 stack = ["HTML", "CSS"]
 source = "https://github.com/kaggwe-marvin/penzi"
