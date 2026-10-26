@@ -540,8 +540,9 @@ pre code {
 
 @media (max-width: 560px) {
   .brand {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     letter-spacing: 0.02em;
+    white-space: nowrap;
     padding: 6px 10px;
   }
 
