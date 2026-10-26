@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://kaggwemarvinvictor.me"
 title = "Kaggwe Marvin: Notes"
-description = "Notes, tutorials and projects by Kaggwe Marvin, a developer in Kampala, Uganda, writing about MikroTik RouterOS, Linux on Windows and building for the web."
+description = "Notes, tutorials and projects by Kaggwe Marvin, a freelance developer in Kampala, Uganda, writing about MikroTik RouterOS, Linux on Windows and building for the web."
 default_language = "en"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -25,6 +25,7 @@ github = "github.com/kaggwe-marvin"
 # The main resume site. Shared posts point their canonical URL there,
 # and both sites describe the same person.
 main_site = "https://resume.kaggwemarvinvictor.me"
+hire_url = "https://resume.kaggwemarvinvictor.me/hire/"
 
 # Search and social
 og_image = "images/og.png"

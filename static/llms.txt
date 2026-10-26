@@ -13,6 +13,7 @@
 
 ## Pages
 
+- [Hire me](https://resume.kaggwemarvinvictor.me/hire/): available for freelance projects in Kampala, Uganda, and remotely
 - [Home](https://kaggwemarvinvictor.me/): introduction, latest posts and featured projects
 - [Blog](https://kaggwemarvinvictor.me/blog/): notes and tutorials
 - [Projects](https://kaggwemarvinvictor.me/projects/): software downloads, websites and code
