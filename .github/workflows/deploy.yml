@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     env:
-      SITE: https://kaggwe-marvin.github.io/kaggwe-marvin-resume
+      SITE: https://kaggwemarvinvictor.me
       KEY: 9065fbaa5348b0336100a6653d0178b1
     steps:
       - name: Submit sitemap URLs to IndexNow
@@ -57,7 +57,7 @@ jobs:
           sleep 30
           urls=$(curl -fsSL "$SITE/sitemap.xml" | grep -o '<loc>[^<]*' | sed 's/<loc>//' | jq -R . | jq -s -c .)
           body=$(jq -n -c --arg key "$KEY" --arg loc "$SITE/$KEY.txt" --argjson urls "$urls" \
-            '{host: "kaggwe-marvin.github.io", key: $key, keyLocation: $loc, urlList: $urls}')
+            '{host: "kaggwemarvinvictor.me", key: $key, keyLocation: $loc, urlList: $urls}')
           echo "$body"
           curl -sS -o /dev/null -w "IndexNow response: %{http_code}\n" -X POST "https://api.indexnow.org/indexnow" \
             -H "Content-Type: application/json; charset=utf-8" -d "$body"

@@ -13,10 +13,10 @@
 
 ## Pages
 
-- [Home](https://kaggwe-marvin.github.io/kaggwe-marvin-resume/): introduction, latest posts and featured projects
-- [Blog](https://kaggwe-marvin.github.io/kaggwe-marvin-resume/blog/): notes and tutorials
-- [Projects](https://kaggwe-marvin.github.io/kaggwe-marvin-resume/projects/): software downloads, websites and code
-- [About](https://kaggwe-marvin.github.io/kaggwe-marvin-resume/about/): short bio and contact
+- [Home](https://kaggwemarvinvictor.me/): introduction, latest posts and featured projects
+- [Blog](https://kaggwemarvinvictor.me/blog/): notes and tutorials
+- [Projects](https://kaggwemarvinvictor.me/projects/): software downloads, websites and code
+- [About](https://kaggwemarvinvictor.me/about/): short bio and contact
 
 ## Posts
 
@@ -27,4 +27,4 @@
 
 ## Software
 
-- [Voucher Manager](https://github.com/kaggwe-marvin/Voucher-Manager): free Windows 10/11 app for MikroTik RouterOS 7 User Manager hotspot vouchers. Download: https://kaggwe-marvin.github.io/kaggwe-marvin-resume/projects/
+- [Voucher Manager](https://github.com/kaggwe-marvin/Voucher-Manager): free Windows 10/11 app for MikroTik RouterOS 7 User Manager hotspot vouchers. Download: https://kaggwemarvinvictor.me/projects/

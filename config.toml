@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://kaggwe-marvin.github.io/kaggwe-marvin-resume"
+base_url = "https://kaggwemarvinvictor.me"
 title = "Kaggwe Marvin: Notes"
 description = "Notes, tutorials and projects by Kaggwe Marvin, a developer in Kampala, Uganda, writing about MikroTik RouterOS, Linux on Windows and building for the web."
 default_language = "en"
