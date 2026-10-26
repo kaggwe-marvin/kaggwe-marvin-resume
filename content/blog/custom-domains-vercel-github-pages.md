@@ -2,6 +2,7 @@
 title = "Connecting a Namecheap domain to Vercel and GitHub Pages"
 description = "Step by step: how I pointed a Namecheap domain at a Next.js app on Vercel, and how I put two GitHub Pages sites on my own .me domain and subdomain."
 date = 2024-11-30
+updated = 2026-10-26
 template = "post.html"
 
 [extra]
@@ -10,12 +11,12 @@ canonical = "https://resume.kaggwemarvinvictor.me/blog/custom-domains-vercel-git
 
 +++
 
-A site on `something.vercel.app` or `username.github.io` works, but your own domain looks more professional and is easier to remember. I have done this twice:
+> **Update, October 2026:** I did not renew foundug.com, so [FoundUG](https://foundug.vercel.app) is back on its free address, **foundug.vercel.app**. I have also added Part 2, about putting my GitHub Pages sites on my new domain, kaggwemarvinvictor.me, and Part 3, about going back to a free address.
 
-1. **foundug.com** for [FoundUG](https://foundug.vercel.app), a Next.js app on **Vercel**.
-2. **kaggwemarvinvictor.me** for my sites on **GitHub Pages**. I got the `.me` domain free for a year from Namecheap through the [GitHub Student Developer Pack](https://education.github.com/pack).
+A site on `something.vercel.app` or `username.github.io` works, but your own domain looks more professional and is easier to remember. I have done this twice, both times with a domain bought on Namecheap:
 
-Both domains were bought on Namecheap. Here are the steps for each.
+1. **foundug.com** (November 2024) for [FoundUG](https://foundug.vercel.app), a Next.js app on **Vercel**.
+2. **kaggwemarvinvictor.me** (October 2026) for my sites on **GitHub Pages**. I got the `.me` domain free for a year from Namecheap through the [GitHub Student Developer Pack](https://education.github.com/pack).
 
 ## The idea in one paragraph
 
@@ -26,7 +27,7 @@ There are two kinds of records you will use:
 - **A record:** points a name to an IP address, like `185.199.108.153`.
 - **CNAME record:** points a name to another name, like `kaggwe-marvin.github.io`.
 
-## Part 1: Namecheap to Vercel (foundug.com)
+## Part 1: Namecheap to Vercel (foundug.com, November 2024)
 
 ### Step 1: Add the domain in Vercel
 
@@ -54,7 +55,9 @@ Vercel then shows the DNS records it wants. They show as "Invalid Configuration"
 
 Go back to **Settings → Domains** in Vercel. Within a few minutes to an hour, both domains turn green and Vercel adds HTTPS by itself. That is it: every push to GitHub still deploys as before, now on your own domain.
 
-## Part 2: Namecheap to GitHub Pages (kaggwemarvinvictor.me)
+The free `foundug.vercel.app` address keeps working the whole time. That turned out to matter (see Part 3).
+
+## Part 2: Namecheap to GitHub Pages (kaggwemarvinvictor.me, October 2026)
 
 I have two Zola sites on GitHub Pages. I wanted my notes site on the main domain and my resume on a subdomain:
 
@@ -101,6 +104,16 @@ Back in **Settings → Pages**, wait for the DNS check to pass, then tick **Enfo
 
 Old `kaggwe-marvin.github.io/...` links keep working. GitHub redirects them to the new domain.
 
+## Part 3: When a domain expires (foundug.com, 2026)
+
+A domain is rented, not owned. I chose not to renew foundug.com, and once it expired the name stopped working. The app itself was fine, because Vercel still served it at foundug.vercel.app. Moving back took three small steps:
+
+1. **In Vercel**, go to **Settings → Domains** and remove `foundug.com` and `www.foundug.com`. Now `foundug.vercel.app` is the main address again.
+2. **In your code**, change any place that names the old domain: links, the site URL in your config, and auth or email settings (for example, allowed redirect URLs in Supabase).
+3. **Everywhere else**, update the link: your CV, GitHub repo description and portfolio.
+
+Lesson: before you buy a domain, decide whether you will pay for it next year too. If not, keep sharing the free address, so links in old CVs and posts never break.
+
 ## Mistakes I made, so you can skip them
 
 1. **Putting the domain on the wrong repo.** I first set the domain on my `username.github.io` repo, which was empty. On GitHub Pages, a domain on that special repo moves *every* project site under it. My resume ended up at `kaggwemarvinvictor.me/Personal-Resume/`. A domain can only belong to one repo, so I had to remove it there before I could add it to the right one.
@@ -111,4 +124,4 @@ Old `kaggwe-marvin.github.io/...` links keep working. GitHub redirects them to t
 
 Vercel is easier: two records, and it guides you through them. GitHub Pages needs a few more records and one extra setting per repo, but it is free and works well for static sites like mine.
 
-Either way, the pattern is the same: **add records at Namecheap, add the domain at the host, wait, then turn on HTTPS.**
+Either way, the pattern is the same: **add records at Namecheap, add the domain at the host, wait, then turn on HTTPS.** And set a reminder for the renewal date.
