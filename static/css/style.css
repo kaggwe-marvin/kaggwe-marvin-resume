@@ -539,6 +539,12 @@ pre code {
 }
 
 @media (max-width: 560px) {
+  .brand {
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 6px 10px;
+  }
+
   .hero {
     padding: 22px;
   }
