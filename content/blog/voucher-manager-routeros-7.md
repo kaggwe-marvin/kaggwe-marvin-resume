@@ -6,7 +6,7 @@ template = "post.html"
 
 [extra]
 # The main site holds the original copy of this post
-canonical = "https://kaggwe-marvin.github.io/Personal-Resume/blog/voucher-manager-routeros-7/"
+canonical = "https://resume.kaggwemarvinvictor.me/blog/voucher-manager-routeros-7/"
 
 +++
 

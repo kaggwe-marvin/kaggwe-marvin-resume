@@ -6,7 +6,7 @@ template = "post.html"
 
 [extra]
 # The main site holds the original copy of this post
-canonical = "https://kaggwe-marvin.github.io/Personal-Resume/blog/why-neobrutalism/"
+canonical = "https://resume.kaggwemarvinvictor.me/blog/why-neobrutalism/"
 
 +++
 

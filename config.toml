@@ -24,14 +24,14 @@ github = "github.com/kaggwe-marvin"
 
 # The main resume site. Shared posts point their canonical URL there,
 # and both sites describe the same person.
-main_site = "https://kaggwe-marvin.github.io/Personal-Resume"
+main_site = "https://resume.kaggwemarvinvictor.me"
 
 # Search and social
 og_image = "images/og.png"
 og_image_alt = "Kaggwe Marvin: notes, tutorials and projects"
 same_as = [
     "https://github.com/kaggwe-marvin",
-    "https://kaggwe-marvin.github.io/Personal-Resume/",
+    "https://resume.kaggwemarvinvictor.me/",
 ]
 knows_about = [
     "Python", "Django", "TypeScript", "MikroTik RouterOS", "MSYS2", "QEMU",

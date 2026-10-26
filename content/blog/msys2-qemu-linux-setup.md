@@ -8,7 +8,7 @@ aliases = ["posts/msys2-qemu-linux-setup/"]
 
 [extra]
 # The main site holds the original copy of this post
-canonical = "https://kaggwe-marvin.github.io/Personal-Resume/blog/msys2-qemu-linux-setup/"
+canonical = "https://resume.kaggwemarvinvictor.me/blog/msys2-qemu-linux-setup/"
 
 +++
 

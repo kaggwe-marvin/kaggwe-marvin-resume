@@ -26,4 +26,4 @@ Python, Django, Django REST Framework, TypeScript, Hono, SQL, PostgreSQL, Docker
 
 ## Open to work
 
-I'm looking for **junior developer, business systems and IT roles**, in Kampala or remote. My full resume, with every project and course unit, is on my [main site](https://kaggwe-marvin.github.io/Personal-Resume/).
+I'm looking for **junior developer, business systems and IT roles**, in Kampala or remote. My full resume, with every project and course unit, is on my [main site](https://resume.kaggwemarvinvictor.me/).

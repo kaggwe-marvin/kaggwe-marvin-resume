@@ -1,6 +1,6 @@
 # Kaggwe Marvin: Notes
 
-> Notes, tutorials and projects by Kaggwe Marvin Victor, a full-stack developer in Kampala, Uganda. This is his blog-first site. His full resume is at https://kaggwe-marvin.github.io/Personal-Resume/, which is also the original home of the posts below.
+> Notes, tutorials and projects by Kaggwe Marvin Victor, a full-stack developer in Kampala, Uganda. This is his blog-first site. His full resume is at https://resume.kaggwemarvinvictor.me/, which is also the original home of the posts below.
 
 ## About the author
 
@@ -20,10 +20,10 @@
 
 ## Posts
 
-- [Why I'm drawn to neobrutalism, and how I toned it down](https://kaggwe-marvin.github.io/Personal-Resume/blog/why-neobrutalism/): why he chose neobrutalist design for this site, and the contrast fixes he made to it (dark text on amber, lighter shadows in dark mode).
-- [Why I built Voucher Manager: printing hotspot vouchers on RouterOS 7](https://kaggwe-marvin.github.io/Personal-Resume/blog/voucher-manager-routeros-7/): RouterOS 7 User Manager needs five manual steps to produce printable vouchers (create users, attach a profile to each, run generate-voucher on exactly those users, fetch the generated HTML from um5files/PRIVATE/GENERATED/vouchers/, print). Voucher Manager does all five through the RouterOS API.
-- [Run Linux on Windows 10 or Tiny10 with MSYS2 and QEMU](https://kaggwe-marvin.github.io/Personal-Resume/blog/msys2-qemu-linux-setup/): install QEMU in the MSYS2 MINGW64 environment, use -accel whpx (or -accel tcg -cpu max), forward port 2222 to SSH, and run it in the background without -daemonize, which Windows does not support.
-- [How I built my first site: from Hugo to Zola](https://kaggwe-marvin.github.io/Personal-Resume/blog/how-i-built-this-site/): lessons from moving a personal site from Hugo and hugo-coder to Zola with a custom template.
+- [Why I'm drawn to neobrutalism, and how I toned it down](https://resume.kaggwemarvinvictor.me/blog/why-neobrutalism/): why he chose neobrutalist design for this site, and the contrast fixes he made to it (dark text on amber, lighter shadows in dark mode).
+- [Why I built Voucher Manager: printing hotspot vouchers on RouterOS 7](https://resume.kaggwemarvinvictor.me/blog/voucher-manager-routeros-7/): RouterOS 7 User Manager needs five manual steps to produce printable vouchers (create users, attach a profile to each, run generate-voucher on exactly those users, fetch the generated HTML from um5files/PRIVATE/GENERATED/vouchers/, print). Voucher Manager does all five through the RouterOS API.
+- [Run Linux on Windows 10 or Tiny10 with MSYS2 and QEMU](https://resume.kaggwemarvinvictor.me/blog/msys2-qemu-linux-setup/): install QEMU in the MSYS2 MINGW64 environment, use -accel whpx (or -accel tcg -cpu max), forward port 2222 to SSH, and run it in the background without -daemonize, which Windows does not support.
+- [How I built my first site: from Hugo to Zola](https://resume.kaggwemarvinvictor.me/blog/how-i-built-this-site/): lessons from moving a personal site from Hugo and hugo-coder to Zola with a custom template.
 
 ## Software
 

@@ -8,7 +8,7 @@ aliases = ["posts/how-i-built-this-site/"]
 
 [extra]
 # The main site holds the original copy of this post
-canonical = "https://kaggwe-marvin.github.io/Personal-Resume/blog/how-i-built-this-site/"
+canonical = "https://resume.kaggwemarvinvictor.me/blog/how-i-built-this-site/"
 
 +++
 

@@ -19,7 +19,7 @@ note = "Not code-signed yet, so Windows may show \"Windows protected your PC\". 
 # Live websites. Only list sites that are online.
 [[extra.sites]]
 name = "Resume and portfolio"
-url = "https://kaggwe-marvin.github.io/Personal-Resume"
+url = "https://resume.kaggwemarvinvictor.me"
 description = "My main site: full resume, blog, websites and software downloads."
 stack = ["Zola", "HTML", "CSS"]
 
