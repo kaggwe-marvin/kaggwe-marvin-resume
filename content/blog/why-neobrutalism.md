@@ -3,6 +3,11 @@ title = "Why I'm drawn to neobrutalism, and how I toned it down"
 description = "Thick borders, hard shadows and no fades: why neobrutalist web design appeals to me as a developer, and the rules I set to make it calm enough for a portfolio."
 date = 2026-10-26
 template = "post.html"
+
+[extra]
+# The main site holds the original copy of this post
+canonical = "https://kaggwe-marvin.github.io/Personal-Resume/blog/why-neobrutalism/"
+
 +++
 
 Most websites today look the same. Soft gradients, rounded corners, blurry shadows and buttons that fade in slowly. It looks polished, but it is hard to tell one site from another.
