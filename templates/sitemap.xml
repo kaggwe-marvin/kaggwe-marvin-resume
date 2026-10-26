@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {#- Posts whose original copy lives on the resume site are left out, so Google
+        is only asked to index pages that are canonical here. -#}
+    {%- for sitemap_entry in entries %}
+    {%- set canonical = sitemap_entry.extra.canonical | default(value="") %}
+    {%- if not canonical %}
+    <url>
+        <loc>{{ sitemap_entry.permalink | escape_xml | safe }}</loc>
+        {%- if sitemap_entry.updated %}
+        <lastmod>{{ sitemap_entry.updated }}</lastmod>
+        {%- endif %}
+    </url>
+    {%- endif %}
+    {%- endfor %}
+</urlset>
