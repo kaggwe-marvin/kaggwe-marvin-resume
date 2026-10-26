@@ -13,7 +13,7 @@
 
 {% block content %}
 {%- set blog = get_section(path="blog/_index.md") %}
-<section class="hero card card-yellow">
+<section class="hero card card-accent">
     <h1>{{ section.extra.hello }}</h1>
     <p class="lead">{{ section.extra.intro }}</p>
     <ul class="chips">
@@ -22,33 +22,43 @@
         {% endfor %}
     </ul>
     <div class="actions">
-        <a class="btn" href="{{ get_url(path='/blog/') }}">Read the blog</a>
-        <a class="btn btn-white" href="{{ config.extra.main_site }}/">See my resume</a>
+        <a class="btn btn-strong" href="{{ get_url(path='/blog/') }}">Read the blog</a>
+        <a class="btn" href="{{ config.extra.main_site }}/">See my resume</a>
     </div>
 </section>
 
 <section>
     <h2 class="label">Latest posts</h2>
     {% for post in blog.pages %}{% if loop.index <= 3 %}
-    <article class="card post-item">
+    <article class="card post-item link-card">
         <p class="meta"><time datetime="{{ post.date }}">{{ post.date | date(format="%-d %b %Y") }}</time> · {{ post.reading_time }} min</p>
         <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
         <p>{{ post.description }}</p>
     </article>
     {% endif %}{% endfor %}
-    <p><a class="btn btn-white" href="{{ get_url(path='/blog/') }}">All posts</a></p>
+    <p><a class="btn" href="{{ get_url(path='/blog/') }}">All posts</a></p>
 </section>
 
 <section>
     <h2 class="label">Things I built</h2>
-    <div class="grid">
+    <div class="builds">
         {% for item in section.extra.featured %}
-        <article class="card card-cyan">
+        <article class="card link-card{% if loop.first %} card-accent{% endif %}">
+            <div class="row">
+                <span class="build-num">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+                <span class="badge">{{ item.kind }}</span>
+            </div>
             <h3><a href="{% if '://' in item.url %}{{ item.url }}{% else %}{{ get_url(path=item.url) }}{% endif %}">{{ item.name }}</a></h3>
             <p>{{ item.blurb }}</p>
+            <ul class="chips">
+                {% for tech in item.stack %}
+                <li>{{ tech }}</li>
+                {% endfor %}
+            </ul>
+            <p class="build-cta">{{ item.cta }} &rarr;</p>
         </article>
         {% endfor %}
     </div>
-    <p><a class="btn btn-white" href="{{ get_url(path='/projects/') }}">All projects</a></p>
+    <p><a class="btn" href="{{ get_url(path='/projects/') }}">All projects</a></p>
 </section>
 {% endblock content %}

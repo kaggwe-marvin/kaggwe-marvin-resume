@@ -10,16 +10,25 @@ topics = ["MikroTik RouterOS", "Linux on Windows", "Django", "Static sites", "Gi
 
 [[extra.featured]]
 name = "Voucher Manager"
-blurb = "Free Windows app that makes and prints MikroTik hotspot vouchers in one click."
+kind = "Windows app"
+blurb = "Free Windows app that makes and prints MikroTik hotspot vouchers in one click. It turns five manual RouterOS 7 steps into one button."
+stack = ["Python", "MikroTik RouterOS", "Inno Setup"]
+cta = "Download it"
 url = "projects/"
 
 [[extra.featured]]
 name = "Custom ERP"
-blurb = "Django ERP with a double-entry ledger, role-based access and audit logs."
+kind = "Backend"
+blurb = "Django ERP with a double-entry ledger that blocks unbalanced entries, role-based access and audit logs."
+stack = ["Python", "Django"]
+cta = "Read the code"
 url = "https://github.com/kaggwe-marvin/custom-ERP"
 
 [[extra.featured]]
 name = "FoundUG"
-blurb = "Platform for reporting lost and found documents in Uganda."
+kind = "Web app"
+blurb = "Free platform for reporting lost and found documents in Uganda and getting them back to their owners."
+stack = ["Next.js", "TypeScript", "Supabase"]
+cta = "Visit the site"
 url = "https://foundug.vercel.app"
 +++

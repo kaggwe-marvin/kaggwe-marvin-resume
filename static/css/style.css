@@ -1,23 +1,50 @@
-/* Minimal neobrutalism: flat colours, thick borders, hard shadows. */
+/* Desaturated neobrutalism: flat fills, thick borders, hard shadows, instant states.
+   Tokens follow design.md, with two contrast fixes noted below. */
 :root {
-  --paper: #fffdf5;
-  --surface: #ffffff;
-  --ink: #111111;
-  --muted: #444444;
-  --yellow: #ffd23f;
-  --cyan: #a0e7e5;
-  --line: 3px solid var(--ink);
-  --shadow: 5px 5px 0 var(--ink);
-  --shadow-big: 8px 8px 0 var(--ink);
+  --border-width: 3px;
+  --offset: 4px;
+
+  /* Dark (default) */
+  --bg-base: #1a1d20;
+  --bg-card: #2b3036;
+  --accent: #d9a05b;
+  --text-primary: #f4f5f6;
+  --text-muted: #9aa0a6;
+  --border-color: #0d0e10;
+  /* design.md uses the border colour for shadows, but #0d0e10 on #1a1d20 is 1.1:1
+     and the shadow disappears. This slate keeps it visible (3.4:1). */
+  --shadow-color: #687079;
+  /* Text on amber is always dark: white on #c58c43 is only 2.9:1. */
+  --on-accent: #1a1d20;
+
+  --line: var(--border-width) solid var(--border-color);
+  --shadow: var(--offset) var(--offset) 0 var(--shadow-color);
+  --shadow-big: 8px 8px 0 var(--shadow-color);
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #151515;
-    --surface: #1f1f1f;
-    --ink: #f2f2f2;
-    --muted: #c4c4c4;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg-base: #eceff1;
+    --bg-card: #ffffff;
+    --accent: #c58c43;
+    --text-primary: #1a1d20;
+    --text-muted: #565e67;
+    --border-color: #1a1d20;
+    --shadow-color: #1a1d20;
+    color-scheme: light;
   }
+}
+
+:root[data-theme="light"] {
+  --bg-base: #eceff1;
+  --bg-card: #ffffff;
+  --accent: #c58c43;
+  --text-primary: #1a1d20;
+  --text-muted: #565e67;
+  --border-color: #1a1d20;
+  --shadow-color: #1a1d20;
+  color-scheme: light;
 }
 
 * {
@@ -26,9 +53,38 @@
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font: 17px/1.65 "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: var(--border-width) solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Mechanical scrollbars */
+html {
+  scrollbar-color: var(--accent) var(--bg-base);
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+  border-left: var(--line);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border: var(--line);
 }
 
 a {
@@ -40,16 +96,22 @@ a {
 }
 
 a:hover {
-  background: var(--yellow);
-  color: #111111;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 h1,
 h2,
 h3 {
   line-height: 1.2;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.01em;
+}
+
+h1,
+.brand,
+.label {
+  font-family: "Syne", "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 h3 {
@@ -70,11 +132,51 @@ h2 a {
 .skip:focus {
   left: 16px;
   top: 16px;
-  background: var(--yellow);
-  color: #111111;
+  background: var(--accent);
+  color: var(--on-accent);
   border: var(--line);
   padding: 8px 12px;
   z-index: 10;
+}
+
+/* Buttons, nav links and the theme switch share one mechanical behaviour:
+   hover fills with amber instantly, pressing sinks the box into its shadow. */
+.btn,
+.nav a,
+.theme-toggle {
+  display: inline-block;
+  border: var(--line);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: var(--shadow);
+  padding: 8px 16px;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: none;
+}
+
+.btn:hover,
+.nav a:hover,
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.btn:active,
+.nav a:active,
+.theme-toggle:active {
+  transform: translate(var(--offset), var(--offset));
+  box-shadow: none;
+}
+
+.btn-strong {
+  background: var(--text-primary);
+  color: var(--bg-base);
 }
 
 /* Header and navigation */
@@ -91,41 +193,42 @@ h2 a {
 
 .brand {
   display: inline-block;
-  background: var(--yellow);
-  color: #111111;
+  background: var(--accent);
+  color: var(--on-accent);
   border: var(--line);
   box-shadow: var(--shadow);
   padding: 6px 14px;
-  font-size: 1.25rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
+.brand:hover {
+  background: var(--text-primary);
+  color: var(--bg-base);
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
 }
 
 .nav a {
-  border: var(--line);
-  background: var(--surface);
-  padding: 6px 14px;
-  text-decoration: none;
-  box-shadow: 3px 3px 0 var(--ink);
-  transition: transform 0.08s, box-shadow 0.08s;
-}
-
-.nav a:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 var(--ink);
+  padding: 6px 12px;
 }
 
 .nav a[aria-current="page"] {
-  background: var(--yellow);
-  color: #111111;
+  background: var(--text-primary);
+  color: var(--bg-base);
+}
+
+.theme-toggle {
+  padding: 6px 10px;
+  line-height: 1.65;
 }
 
 /* Layout */
@@ -151,8 +254,8 @@ section {
 
 .label {
   display: inline-block;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--text-primary);
+  color: var(--bg-base);
   padding: 4px 12px;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -162,10 +265,11 @@ section {
 
 /* Cards */
 .card {
-  background: var(--surface);
+  position: relative;
+  background: var(--bg-card);
   border: var(--line);
   box-shadow: var(--shadow);
-  padding: 20px;
+  padding: 22px;
   margin-bottom: 20px;
 }
 
@@ -173,19 +277,66 @@ section {
   margin-bottom: 0;
 }
 
-.card-yellow {
-  background: var(--yellow);
-  color: #111111;
+.card-accent {
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
-.card-cyan {
-  background: var(--cyan);
-  color: #111111;
+.card-accent a:hover {
+  background: var(--on-accent);
+  color: var(--accent);
 }
 
-.card-yellow a:hover,
-.card-cyan a:hover {
-  background: #ffffff;
+.card-accent .meta,
+.card-accent .small {
+  color: var(--on-accent);
+}
+
+/* On an amber card the amber hover would vanish, so buttons go dark instead */
+.card-accent .btn:hover {
+  background: var(--on-accent);
+  color: #f4f5f6;
+}
+
+/* Whole-card links. The title link stretches over the card, so the full box
+   is clickable. Hover swaps the shadow to amber; it does not repaint a big
+   block of text. Pressing sinks the card like a button. */
+.link-card h2 a::after,
+.link-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.link-card h2 a:hover,
+.link-card h3 a:hover {
+  background: none;
+  color: inherit;
+}
+
+.link-card:hover {
+  box-shadow: var(--offset) var(--offset) 0 var(--accent);
+}
+
+.link-card:hover h2 a,
+.link-card:hover h3 a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+}
+
+.link-card:active {
+  transform: translate(var(--offset), var(--offset));
+  box-shadow: none;
+}
+
+.card-accent.link-card:hover {
+  box-shadow: var(--offset) var(--offset) 0 var(--text-primary);
+}
+
+.card-accent.link-card:hover h2 a,
+.card-accent.link-card:hover h3 a {
+  text-decoration-color: var(--on-accent);
 }
 
 .hero {
@@ -214,25 +365,11 @@ section {
   font-size: 1.3rem;
 }
 
-.post-item {
-  transition: transform 0.08s, box-shadow 0.08s;
-}
-
-.post-item:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: var(--shadow-big);
-}
-
 .meta,
 .small {
-  color: var(--muted);
+  color: var(--text-muted);
   font-size: 0.9rem;
   margin: 0;
-}
-
-.card-yellow .small,
-.card-cyan .small {
-  color: #333333;
 }
 
 .row {
@@ -244,15 +381,58 @@ section {
 }
 
 .badge {
-  border: 2px solid #111111;
-  background: #ffffff;
-  color: #111111;
+  border: 2px solid var(--border-color);
+  background: var(--bg-base);
+  color: var(--text-primary);
   padding: 2px 10px;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-/* Chips and buttons */
+.card-accent .badge {
+  background: var(--on-accent);
+  color: #f4f5f6;
+}
+
+/* Things I built */
+.builds {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.builds .card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.builds .card:first-child {
+  grid-column: 1 / -1;
+}
+
+.builds .card:first-child h3 {
+  font-size: 1.6rem;
+}
+
+.build-num {
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+}
+
+.build-cta {
+  margin-top: auto;
+  padding-top: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+/* Chips */
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -263,63 +443,24 @@ section {
 }
 
 .chips li {
-  border: 2px solid var(--ink);
-  background: var(--cyan);
-  color: #111111;
+  border: 2px solid var(--border-color);
+  background: var(--bg-base);
+  color: var(--text-primary);
   padding: 2px 10px;
   font-size: 0.85rem;
   font-weight: 700;
 }
 
-.card-cyan .chips li {
-  background: #ffffff;
+.card-accent .chips li {
+  background: transparent;
+  color: var(--on-accent);
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   margin: 20px 0 8px;
-}
-
-.btn {
-  display: inline-block;
-  border: var(--line);
-  border-color: #111111;
-  background: #111111;
-  color: #ffffff;
-  padding: 10px 18px;
-  text-decoration: none;
-  box-shadow: 4px 4px 0 var(--yellow);
-  transition: transform 0.08s, box-shadow 0.08s;
-}
-
-.btn:hover {
-  background: #111111;
-  color: #ffffff;
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--yellow);
-}
-
-.btn:active {
-  transform: translate(3px, 3px);
-  box-shadow: 0 0 0 var(--yellow);
-}
-
-.btn-white {
-  background: #ffffff;
-  color: #111111;
-  box-shadow: 4px 4px 0 #111111;
-}
-
-.btn-white:hover {
-  background: #ffffff;
-  color: #111111;
-  box-shadow: 6px 6px 0 #111111;
-}
-
-.btn-white:active {
-  box-shadow: 0 0 0 #111111;
 }
 
 /* Posts */
@@ -348,10 +489,10 @@ section {
 blockquote {
   margin: 20px 0;
   padding: 12px 16px;
-  background: var(--yellow);
-  color: #111111;
+  background: var(--bg-card);
   border: var(--line);
-  box-shadow: 4px 4px 0 var(--ink);
+  border-left: 10px solid var(--accent);
+  box-shadow: var(--shadow);
 }
 
 blockquote p {
@@ -361,9 +502,9 @@ blockquote p {
 code {
   font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 0.88em;
-  background: var(--cyan);
-  color: #111111;
-  border: 1px solid #111111;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   padding: 1px 5px;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
@@ -371,16 +512,15 @@ code {
 
 pre {
   overflow-x: auto;
-  background: var(--surface);
+  background: var(--bg-card);
   border: var(--line);
-  box-shadow: 4px 4px 0 var(--ink);
+  box-shadow: var(--shadow);
   padding: 14px 16px;
   margin: 12px 0 18px;
 }
 
 pre code {
   background: none;
-  color: inherit;
   border: none;
   padding: 0;
 }
@@ -406,6 +546,10 @@ pre code {
   .hero h1,
   .page-title {
     font-size: 2rem;
+  }
+
+  .builds {
+    grid-template-columns: 1fr;
   }
 }
 

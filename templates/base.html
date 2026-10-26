@@ -51,7 +51,14 @@
 
     <link rel="icon" href="{{ get_url(path='images/favicon.svg') }}" type="image/svg+xml">
     <link rel="apple-touch-icon" href="{{ get_url(path='images/apple-touch-icon.png') }}">
-    <meta name="theme-color" content="#FFD23F">
+    <meta name="theme-color" content="#1A1D20">
+    <script>
+        // Apply a saved light/dark choice before the page paints. No choice = follow the system.
+        try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Syne:wght@800&display=swap">
     <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='blog/atom.xml') }}">
     <link rel="stylesheet" href="{{ get_url(path='css/style.css', cachebust=true) }}">
 
@@ -96,6 +103,7 @@
             <a href="{{ get_url(path='/blog/') }}" {% if "/blog" in cp %}aria-current="page"{% endif %}>Blog</a>
             <a href="{{ get_url(path='/projects/') }}" {% if "/projects" in cp %}aria-current="page"{% endif %}>Projects</a>
             <a href="{{ get_url(path='/about/') }}" {% if "/about" in cp %}aria-current="page"{% endif %}>About</a>
+            <button class="theme-toggle" type="button" aria-label="Switch light or dark mode">◐</button>
         </nav>
     </header>
 
@@ -112,6 +120,15 @@
             <a href="{{ get_url(path='blog/atom.xml') }}">RSS</a>
         </p>
     </footer>
+    <script>
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+            const root = document.documentElement;
+            const dark = root.dataset.theme ? root.dataset.theme === 'dark'
+                : !matchMedia('(prefers-color-scheme: light)').matches;
+            root.dataset.theme = dark ? 'light' : 'dark';
+            try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+        });
+    </script>
     {% block scripts %}{% endblock scripts %}
 </body>
 
