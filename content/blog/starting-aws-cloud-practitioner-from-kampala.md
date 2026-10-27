@@ -1,7 +1,6 @@
 +++
 title = "Starting AWS Cloud Practitioner from Kampala"
-description = "I'm a final-year Bachelor of Business Computing student. I've built and shipped web apps for a few years. So far my web projects have run on GitHub Pages, Vercel and Supabase. I've never deployed anything to AWS. This week I'm going for the AWS Certified Cloud Practitioner before I graduate. This post is my plan. I'm writing it down in public so I stick to it.
-"
+description = "I'm a final-year Bachelor of Business Computing student. I've built and shipped web apps for a few years. So far my web projects have run on GitHub Pages, Vercel and Supabase. I've never deployed anything to AWS. This week I'm going for the AWS Certified Cloud Practitioner before I graduate. This post is my plan. I'm writing it down in public so I stick to it."
 date = 2026-10-27
 template = "post.html"
 
