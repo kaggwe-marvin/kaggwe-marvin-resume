@@ -62,3 +62,7 @@ I'm also studying for an SAP Financial Accounting exam this semester, so AWS get
 ## Follow along
 
 I'll post an update every week: what I studied, what I built and what confused me. If you've passed Cloud Practitioner, **what's one thing you wish you'd known before the exam?** And if you're in East Africa and building on AWS, which Region do you use, and why?
+
+---
+
+This post is available on [AWS BUILDER CENTER](https://builder.aws.com/content/3LHqiRp0qRHyR734UXDu8EVlOaA/starting-aws-cloud-practitioner-from-kampala) A like and comment would mean the world
