@@ -14,10 +14,12 @@ build_search_index = false
 generate_feeds = false
 feed_filenames = ["atom.xml"]
 
+
+
 [extra]
 name = "Kaggwe Marvin Victor"
 short_name = "Kaggwe Marvin Victor"
-alternate_names = ["Kaggwe Marvin", "Marvin Kaggwe", "Marvin Victor Kaggwe", "Kaggwe Victor"]
+alternate_names = ["Kaggwe Marvin", "Marvin Kaggwe", "Marvin Victor Kaggwe", "Kaggwe Victor", "Kaggwe", "Marvin", "Victor"]
 role = "Full-Stack Developer"
 location = "Kampala, Uganda"
 email = "kaggwemarvin@gmail.com"
